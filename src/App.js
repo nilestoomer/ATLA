@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Main from './Main';
+import Nav from './Nav';
+import CharSrc from './CharSrc';
+import { Routes, Route } from 'react-router-dom';
+import Nation from './Nation';
+import Avatars from './Avatars';
 
 function App() {
+  const [charCard, setCharCard] = useState("")
+  const fetchRandom = async () => {
+      const res = await axios.get("https://last-airbender-api.fly.dev/api/v1/characters/random");
+      console.log(res.data)
+      setCharCard(res.data[0])
+  }
+
+  useEffect(() => {
+    fetchRandom();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header>ATLA Lore</header>
+      <Main charCard={charCard}/>
+      <Nav />
+
+
+      <Routes>
+          <Route path="/nation" element={<Nation />} />
+          <Route path="/avatars" exact element={<Avatars />} />
+          <Route path="/character-search" element={<CharSrc />} />
+       </Routes>
     </div>
   );
 }
