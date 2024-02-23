@@ -21,27 +21,29 @@ function Nation() {
   return (
     <div>
       <form>
-        <label htmlFor="char-drop">Choose A Character</label>
+        <label htmlFor="char-drop">Choose A Nation</label>
         <select
           id="dropdown"
           value={drop}
           onChange={handleChange}
         >
           <option value="">Choose</option>
-          <option value="fire+nation">Fire Nation</option>
-          <option value="water+tribe">Water Tribe</option>
-          <option value="earth+kingdom">Earth Kingdom</option>
-          <option value="air+nomads">Air Nomads</option>
+          <option value="fire+nation">Fire Nation 🔥</option>
+          <option value="water+tribe">Water Tribe 🌊</option>
+          <option value="earth+kingdom">Earth Kingdom 🗿</option>
+          <option value="air+nomads">Air Nomads 🌬️</option>
 
         </select>
       </form>
+      <div className='avatar-thing'>
         {charsInfo.length > 0 && charsInfo.map((charInfo) => (
             <div>
-                <img src={charInfo.photoUrl} alt={`Picture of ${charInfo.name}`}/>
+                <img className="nation-pic" src={charInfo.photoUrl} alt={`Picture of ${charInfo.name}`}/>
                 <p>{charInfo.name}</p>
                 <p>{charInfo.affiliation}</p>
             </div>
         ))}
+        </div>
     </div>
   );
 }

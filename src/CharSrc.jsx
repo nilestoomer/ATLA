@@ -9,6 +9,10 @@ function CharSrc() {
     const res = await axios.get(`https://last-airbender-api.fly.dev/api/v1/characters?name=${search}`);
     console.log(res.data)
     setChar(res.data[0])
+
+    // useEffect(() => {
+    //   fetchChar();
+    // }, []);
 }
   return (
     <div>
@@ -25,7 +29,7 @@ function CharSrc() {
       type='search'
       >Search</button>
 
-      <img src={char.photoUrl} alt={`Picture of ${char.name}`}/>
+      <img className='char-src-pic' src={char.photoUrl} alt={`Picture of ${char.name}`}/>
       <p>Name: {char.name || "wrong"}</p>
     </div>
   )

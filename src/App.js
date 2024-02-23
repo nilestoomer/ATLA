@@ -22,9 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <header>ATLA Lore</header>
-      <Main charCard={charCard}/>
       <Nav />
+      <Main charCard={charCard}/>
 
 
       <Routes>

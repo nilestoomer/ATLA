@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Modal from './components/Modal.jsx';
+import Modal from './Modal.jsx';
 
 function Avatars() {
   const [avatarsInfo, setAvatarsInfo] = useState([])
@@ -24,10 +24,10 @@ function Avatars() {
   }
   
   return (
-    <div>
+    <div className='avatar-thing'>
       {avatarsInfo.length > 0 && avatarsInfo.map((avatarInfo) => (
             <div onClick={() => handleModal(avatarInfo)}>
-                <img src={avatarInfo.photoUrl} alt={`Picture of ${avatarInfo.name}`}/>
+                <img className='avatarModelPic' src={avatarInfo.photoUrl} alt={`Picture of ${avatarInfo.name}`}/>
                 <p>{avatarInfo.name}</p>
                 {/* <p>{avatarInfo.position}</p>
                 <p>{avatarInfo.allies}</p>

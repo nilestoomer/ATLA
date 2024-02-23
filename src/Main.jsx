@@ -4,7 +4,7 @@ import "./App.css"
 function Main({charCard}) {
   return (
       <div className='main'>
-        <img src={charCard.photoUrl} alt={`Picture of ${charCard.name}`}/>
+        <img className='main-image' src={charCard.photoUrl} alt={`Picture of ${charCard.name}`}/>
         <h1>{charCard.name}</h1>
         <p>Position: {charCard.position || "Human"}</p>
         <p>Affiliation: {charCard.affiliation || "None"}</p>

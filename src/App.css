@@ -1,3 +1,69 @@
-.main {
+.App {
     /* display: none; */
+    font-family: monospace;
+    text-align: center;
+    background-image: url("https://i.pinimg.com/originals/45/31/3d/45313ddd39f3a3b43bd30cc29acb0acf.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
+
+.main {
+    padding-top: 1rem;
+    height: 100vh;
+}
+
+.main-image, .avatarModelPic, .char-src-pic, .nation-pic {
+    /* border: 10 px dodgerblue; */
+    border-radius: 10px;
+}
+
+.avatar-thing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.nation-thing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: beige;
+    color: black;
+  }
+
+  header {
+    text-align: left;
+    color: antiquewhite;
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
