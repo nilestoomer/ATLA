@@ -67,3 +67,9 @@ ul {
     padding-top: 1rem;
     padding-left: 1rem;
   }
+
+  @media only screen and (max-width: 600px) {
+    .App{
+    background-image: url("https://i.pinimg.com/originals/94/9c/a3/949ca30678699f8fdc3f1573450e25ca.jpg");
+    }
+  }
